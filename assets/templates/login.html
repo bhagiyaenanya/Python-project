@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<style>
+body{
+     background:("\Users\Selva\Downloads\blue.jpg");
+     font-family:Verdana,Geneva,tahoma,sans-serif
+}
+.regform{
+      width:600px;
+      margin:250px auto;
+      padding:10px 20px 30px;
+      background-color:rgba(0,0,0,.5);
+      color:white;
+}
+
+.regform h1{
+      text-align:center;
+      color:#E29578;
+}
+</style>
+<table>
+    <th>FNAME</th>
+    <th>LNAME</th>
+    <th>ID</th>
+    <th>PWD</th>
+    <th>PHONE</th>
+    <th>EMAIL</th>
+    <th>GENDER</th>
+
+{% for i in data %}
+    <tr>
+
+        <td>{{i.firstname}}</td>
+        <td>{{i.lastname}}</td>
+        <td>{{i.userid}}</td>
+        <td>{{i.password}}</td>
+        <td>{{i.mblenum}}</td>
+        <td>{{i.email}}</td>
+        <td>{{i.gender}}</td>
+        </tr>
+    {% endfor %}
+</table>
+
+</body>
+</html>

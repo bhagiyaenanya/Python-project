@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<style >
+        button {
+        background-color:pink;
+        border-color:black;
+        color:black
+        }
+        h1{
+            color:darkblue;
+        }
+    </style>
+<body>
+<h1>FORM 1</h1>
+<form method="post">
+    {%csrf_token %}
+firstname<input type="text" name="uname"><br>
+lastname<input type="text" name="password"><br>
+userid<input type="text" name="mnum"><br>
+password<input type="text" name="pwd"><br>
+mblenm<input type="text" name="phno"><br>
+email<input type="text" name="eml"><br>
+gender<input type="text" name="gen"><br>
+
+    <button type="submit">submit</button>
+</form>
+</body>
+</html>

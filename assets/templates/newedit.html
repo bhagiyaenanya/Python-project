@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<form method="post">
+    {%csrf_token %}
+    bookname <input type="text" name="bname" value={{obj.bookname}}><br>
+    code <input type="text" name="cat" value={{obj.code}}><br>
+    category <input type="text" name="cat" value={{obj.category}}><br>
+    author <input type="text" name="writer" value={{obj.author}}><br>
+<div class="but">
+<div class="button">
+     <button class="button">submit</a></button>
+</div>
+</div>
+<div class="but">
+<div class="button">
+     <button><a href="/add" class="button">back</a></button>
+</div>
+</div>
+</form>
+</body>
+</html>

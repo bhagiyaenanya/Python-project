@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>orderdetails</title>
+<body style="background-color:pink;">
+<h1 style ="color:violet;">FORM 3</h1>
+<form method="post">
+    {%csrf_token %}
+bookid<input type="text" name="bid"><br>
+count<input type="text" name="count"><br>
+price<input type="text" name="rate"><br>
+delivery_date<input type="text" name="del"><br>
+status<input type="text" name="stat"><br>
+created_by<input type="text" name="crb"><br>
+created_date<input type="text" name="crd"><br>
+updated_by<input type="text" name="upb"><br>
+updated_date<input type="text" name="upd"><br>
+    <style >
+        button {
+        background-color:powderblue;
+        border-color:black;
+        color:black
+        }
+    </style>
+    <button type="submit">submit</button>
+</form>
+</body>
+</html>

@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<form method="post">
+    {%csrf_token %}
+    bookid <input type="text" name="bid" value={{obj.bookid.bookname}}><br>
+    count <input type="text" name="count" value={{obj.count}}><br>
+    price <input type="text" name="rate" value={{obj.price}}><br>
+    delivery_date <input type="text" name="del" value={{obj.delivery_date}}><br>
+    status <input type="text" name="stat" value={{obj.status}}><br>
+<div class="but">
+<div class="button">
+     <button type="submit">SUBMIT</button>
+</div>
+</div>
+<div class="but">
+<div class="button">
+    <button type="submit">BACK</button>
+ </div>
+ </div>
+</form>
+</body>
+</html>

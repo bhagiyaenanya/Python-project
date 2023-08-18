@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>starbook</title>
+ <style>
+	table,td,th{
+		border:1px solid black;
+	}
+	.header button{
+	width:15%;
+	height:25px;
+    float:left;
+    background: lightskyblue;
+    color:black;
+	}
+    .but button{
+    width:15%;
+    height:25px;
+    float:right;
+    background: lightskyblue; 
+    color:black; 
+    }
+
+</style>
+</head>
+
+<body>
+<div class="header">
+<div class="button">
+    <button><a href="/book" class="button">ORDERDETAILS</a></button>
+</div>
+</div>
+<div class="but">
+ <div class="button">
+     <button><a href="/add" class="button">ADD</a></button>
+ </div>
+ </div>
+<table>
+    <th>NAME</th>
+    <th>CODE</th>
+    <th>CATEGORY</th>
+    <th>AUTHOR</th>
+    <th>STATUS</th>
+    <th>CREATED_BY</th>
+    <th>CREATED_DATE</th>
+    <th>UPDATED_BY</th>
+    <th>UPDATED_DATE</th>
+{% for i in data %}
+    <tr>
+        <td>{{i.bookname}}</td>
+        <td>{{i.code}}</td>
+        <td>{{i.category}}</td>
+        <td>{{i.author}}</td>
+        <td>{{i.status}}</td>
+        <td>{{i.created_by}}</td>
+        <td>{{i.created_date}}</td>
+        <td>{{i.updated_by}}</td>
+        <td>{{i.updated_date}}</td>
+        <td><a style="text-decoration:none" href="{% url 'edit' i.id %}" class="button0">EDIT</a></td>
+        <td><a style="text-decoration:none" href="{% url 'table1' i.id %}" class="button0">DELETE</a></td>
+        </tr>
+    {% endfor %}
+</table>
+
+</body>
+</html>

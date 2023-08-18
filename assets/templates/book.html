@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>TITLE</title>
+</head>
+<style>
+body{
+     background:lightblue;
+     font-family:Verdana,Geneva,tahoma,sans-serif
+}
+.regform{
+      width:500px;
+      margin:250px auto;
+      padding:10px 20px 30px;
+      background-color:darkblue;
+      color:white;
+}
+
+.regform h1{
+      text-align:center;
+      color:#E29578;
+}
+
+
+</style>
+<body>
+   <div class="regform">
+       <h1>SIGN UP</h1>
+       <form method="post">
+           {% csrf_token %}
+           <div class="input">
+             <label for="name" >USER NAME</label>
+             <input type="text" id="name" name="name">
+           </div>
+   <div class="input">
+       <label for ="pwd">PASSWORD</label>
+       <input type="password" name="pwd" id="pwd">
+   </div>
+   <div class="btn">
+       <button type="submit">SUBMIT</button>
+   </div>
+       </form>
+ <div class="but">
+ <div class="button">
+     <button type="button">signup</button>
+ </div>
+ </div>
+   </div>
+</body>
+<script>
+    function Data(){
+    console.log("working")
+    }
+    Data()
+</script>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

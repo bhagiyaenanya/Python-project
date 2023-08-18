@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>sunorder</title>
+    <style>
+	table,td,th{
+		border:1px solid black;
+	}
+    button{
+        width:10%;
+        height:25px;
+        color:black;
+        background-color:lightskyblue;
+        float:left;
+    }
+     .button1 button{
+        width:10%;
+        height:25px;
+        color:black;
+        background-color:lightskyblue;
+        float:right;
+    }
+    .main{
+        margin: 20px;
+    }
+</style>
+</head>
+<body>
+
+<div class="button">
+    <button><a href="/order" class="button">BOOKDETAILS</a></button>
+
+</div>
+
+ <div class="button1">
+     <button><a href="/add1" class="button">ADD</a></button>
+ </div><br><br>
+ <div class="main">
+<table class="tab">
+    <th>BOOKID</th>
+    <th>COUNT</th>
+    <th>PRICE</th>
+    <th>DELIVERY_DATE</th>
+    <th>STATUS</th>
+    <th>CREATED_BY</th>
+    <th>CREATED_DATE</th>
+    <th>UPDATED_BY</th>
+    <th>UPDATED_DATE</th>
+{% for i in data %}
+    <tr>
+        <td>{{i.bookid}}</td>
+        <td>{{i.count}}</td>
+        <td>{{i.price}}</td>
+        <td>{{i.delivery_date}}</td>
+        <td>{{i.status}}</td>
+        <td>{{i.created_by}}</td>
+        <td>{{i.created_date}}</td>
+        <td>{{i.updated_by}}</td>
+        <td>{{i.updated_date}}</td>
+        <td><a style="text-decoration:none" href="{% url 'edit1' i.id %}" class="button1">EDIT</a></td>
+        <td><a style="text-decoration:none" href="{% url 'table' i.id %}" class="button0">DELETE</a></td>
+    </tr>
+    {% endfor %}
+</table>
+</div>
+</body>
+</html>

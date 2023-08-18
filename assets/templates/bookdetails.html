@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>bookdetails</title>
+</head>
+<style >
+        button {
+        background-color:powderblue;
+        border-color:black;
+        color:black
+        }
+        h1{
+            color:darkslateblue;
+        }
+</style >
+<body>
+<h1>FORM 2</h1>
+<form method="post">
+    {%csrf_token %}
+
+bookname<input type="text" name="bname"><br>
+code<input type="text" name="cd"><br>
+category<input type="text" name="cat"><br>
+author<input type="text" name="writer"><br>
+status<input type="text" name="stat"><br>
+created_by<input type="text" name="crb"><br>
+created_date<input type="text" name="crd"><br>
+updated_by<input type="text" name="upb"><br>
+updated_date<input type="text" name="upd"><br>
+
+    <button type="submit">SUBMIT</button>
+</form>
+<script>
+
+</script>
+
+</body>
+</html>
